@@ -1,0 +1,54 @@
+import java.math.BigDecimal;
+import java.util.Objects;
+import java.util.Date;
+
+public class StockInfo {
+    private String tickerSymbol;
+    private String companyName;
+    private BigDecimal currPrice;
+    private Date ipoDate;
+
+    public StockInfo(String tickerSymbol, String companyName,
+                            BigDecimal currPrice, Date ipoDate ) {
+            this.tickerSymbol = tickerSymbol;
+            this.companyName = companyName;
+            this.currPrice = currPrice;
+            this.ipoDate = ipoDate;
+    }
+
+    public String getTickerSymbol() {
+        return tickerSymbol;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public BigDecimal getCurrPrice() {
+        return currPrice;
+    }
+
+    public Date getIpoDate() {
+        return ipoDate;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(tickerSymbol,companyName);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof StockInfo) {
+            StockInfo si = (StockInfo)obj;
+            return this.tickerSymbol.equalsIgnoreCase(si.tickerSymbol);
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return this.tickerSymbol + "," + this.companyName + ","
+            +this.currPrice + "," + this.ipoDate;
+    }
+}

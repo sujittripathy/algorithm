@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class HashMapTest {
+    public static void main(String[] str) {
+        HashMap<Character, Integer> map = 
+                            new HashMap<>();
+        for(int i=1,c=97;i<27;i++,c++) {
+            map.put((char)c, i);
+        }
+
+        Iterator<Map.Entry<Character, Integer>> i = map.entrySet().iterator();
+        while(i.hasNext()) {
+            Map.Entry e = i.next();
+            System.out.println(e.getKey() + "," + e.getValue());
+        }
+    }
+}

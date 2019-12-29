@@ -1,0 +1,16 @@
+import java.util.PriorityQueue;
+
+public class Heap {
+    public static void main(String[] str) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());
+        pq.add(10);
+        pq.add(20);
+        pq.add(30);
+
+        while(!pq.isEmpty()) {
+            System.out.println(pq.poll());
+        }
+
+        System.out.println(pq.size());
+    }
+}

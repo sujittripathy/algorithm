@@ -1,0 +1,8 @@
+public class Tries {
+    Character[] cmap = new Character[26];
+    boolean isLast = false;
+
+    public void addNode(String s) {
+        
+    }
+}

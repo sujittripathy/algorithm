@@ -1,0 +1,23 @@
+public class SIterator<E> implements Iterator<StockInfo> {
+    
+    private StockInfo[] data;
+	private int pos = 0;
+
+	public SIterator(StockInfo[] data) {
+		this.data = data;
+	}
+
+	@Override
+	public boolean hasNext() {
+		if(pos < data.length) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	@Override
+	public StockInfo next() {
+		return data[pos++];
+	}
+}

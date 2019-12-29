@@ -1,0 +1,68 @@
+package hashmap;
+
+public class CustomMap<K,V> {
+	Node<K,V>[] arr = new Node[100];
+
+	public void put(K key, V val) {
+		Node node = new Node(getHash(key), key, val, null);
+		if(arr[getHash(key)] != null) {
+			if(node.getKey().equals(key)) {
+				node.next = arr[getHash(key)];
+				arr[getHash(key)] = node;
+			} else {
+				arr[getHash(key)].next = node;
+			}
+		} else {
+			arr[getHash(key)] = node;
+		}
+	}
+
+	public V get(K key) {
+		if(arr[getHash(key)].key.equals(key)) {
+			return arr[getHash(key)].val;
+		}
+		while(arr[getHash(key)] != null) {
+			if(arr[getHash(key)].key.equals(key)) {
+				return arr[getHash(key)].val;
+			}
+			arr[getHash(key)] = arr[getHash(key)].next;
+		}
+		return null;
+	}
+
+	public boolean remove(K key) {
+		int hc = getHash(key);
+		if(hc < 0 || hc > arr.length) {
+			return false;
+		}
+		arr[getHash(key)] = null;
+		return true;
+	}
+
+	public int getHash(K key) {
+		int hc = Math.abs(key.hashCode()) % 100;
+		return hc;
+	}
+
+	static class Node<K,V> {
+		int hash;
+		K key;
+		V val;
+		Node<K,V> next;
+
+		public Node(int hash, K key, V val, Node next) {
+			this.hash = hash;
+			this.key = key;
+			this.val = val;
+			this.next = next;
+		}
+
+		public K getKey() {
+			return key;
+		}
+
+		public V getVal() {
+			return val;
+		}
+	}
+}

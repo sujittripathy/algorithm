@@ -1,0 +1,19 @@
+package hashmap;
+
+import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Objects;
+
+public class MapContainer {
+
+	public static void main(String[] args) {
+		CustomMap<String,String> map = new CustomMap<>();
+		map.put("apple","box1");
+		map.put("orange","box1");
+		map.put("apple","box2");
+
+		System.out.println(map.get("apple"));
+	}
+}
+
