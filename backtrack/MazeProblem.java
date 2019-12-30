@@ -1,3 +1,5 @@
+import java.util.*;
+
 /**
     Maze Problem: You are given a 2D array that represents a maze. 
     It can have 2 values - 0 and 1.1 represents a wall and 0 represents a path.
@@ -15,28 +17,48 @@
 public class MazeProblem {
     public static void main(String[] args) {
         int[][] grid = new int[][]{{0,1,1,1},{0,1,1,1},{0,0,0,0},{1,1,1,0}};
-        pathHelper(grid, 0, 0);
+        //This 2D array will be used for memoization
+        Status[][] memo = new Status[grid.length][grid[0].length];
+        for(Status[] arr: memo) {
+            Arrays.fill(arr, Status.UNVISITED);
+        }
+        boolean res = pathHelper(grid, 0, 0, memo);
+        System.out.println("Does path exists? " + res);
     }
 
-    private static boolean pathHelper(int[][] grid, int i, int j) {
+    private static boolean pathHelper(int[][] grid, int i, int j, Status[][] memo) {
         //base case
          //a. path found
-         if(i == grid.length - 1 && j == grid[0].length-1) {
+        if(i == grid.length - 1 && j == grid[0].length-1) {
              return true;
-         }
-        if(!isValid(grid, i, j)) {
+        }
+        //if bounced return false
+        if(oob(grid, i, j) || grid[i][j] == 1) {
             return false;
         }
-        //up
-        pathHelper(grid, i-1, j);
+        //check for node is not visited only to avoid loop
+        if(memo[i][j] == Status.NO_PATH || memo[i][j] == Status.VISITING) {
+            return false;
+        }
+        memo[i][j] = Status.VISITING;
+        //up        
+        if(pathHelper(grid, i-1, j, memo)) {
+            return true;
+        }
         //down
-        pathHelper(grid, i+1, j);
+        if(pathHelper(grid, i+1, j, memo)) {
+            return true;
+        }
         //left
-        pathHelper(grid, i, j-1);
+        if(pathHelper(grid, i, j-1, memo)) {
+            return true;
+        }
         //right
-        pathHelper(grid, i, j+1);
-
+        if(pathHelper(grid, i, j+1, memo)) {
+            return true;
+        }
         //not found
+        memo[i][j] = Status.NO_PATH;
         return false;
     }
 
@@ -46,8 +68,13 @@ public class MazeProblem {
             LEFT -> (i, j-1)
             RIGHT -> (i, j+1)
      */
-    private static boolean isValid(int[][] grid, int i, int j) {
-        return i >=0 && j >= 0 && i < grid.length && j < grid[0].length 
-                && grid[i][j] == 0;
+    private static boolean oob(int[][] grid, int i, int j) {
+        return i < 0 || i >= grid.length || j < 0 || j >= grid[0].length;
     }
+}
+
+enum Status {
+    UNVISITED,
+    VISITING,
+    NO_PATH;
 }

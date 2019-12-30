@@ -1,3 +1,16 @@
 Ch01: Arrays & String
+    1.2 > Check Permutation
+    1.6 > String Compression
+    1.9 > String Rotation
 Ch02: LinkedList
 Ch03: Stacks and Queues
+Ch04: Trees & Graphs
+Ch05: Bit Manipulation
+Ch06: Math and logic
+Ch07: Object-oriented design
+Ch08: Recursion and Dynamic Programming
+Ch09: System design and scalability
+Ch10: Sorting and searching
+-----
+Ch16: Moderate
+Ch17: Hard

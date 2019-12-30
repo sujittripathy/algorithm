@@ -29,8 +29,13 @@ Notes: This is a backtracking problem where each char needs to be iterated with 
 # Given a collection of distinct integers, return all possible permutations.
 https://leetcode.com/problems/permutations/
 
-12/27
-------
+Count Inversions in an array
+Inversion Count for an array indicates – how far (or close) the array is from being sorted. If array is already sorted then inversion count is 0. If array is sorted in reverse order that inversion count is the maximum.
+Formally speaking, two elements a[i] and a[j] form an inversion if a[i] > a[j] and i < j
+
+Example:
+The sequence 2, 4, 1, 3, 5 has three inversions (2, 1), (4, 1), (4, 3).
+https://www.geeksforgeeks.org/counting-inversions/
 
 12/28
 ------
@@ -60,4 +65,5 @@ Later
 Note: You can only move either down or right at any point in time.
 https://leetcode.com/problems/minimum-path-sum/
 # Find majority element in the array (Booyer Moore majority voting algorithm)
-
+Next Permutation
+https://leetcode.com/problems/next-permutation/

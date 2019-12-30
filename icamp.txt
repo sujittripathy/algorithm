@@ -64,10 +64,9 @@ For example: If coins are [1,2,5] and the target is 5, output will be:
 [1,2,2]
 [5]
 (Level: Medium) Maze Problem: You are given a 2D array that represents a maze. It can have 2 values - 0 and 1. 1 represents a wall and 0 represents a path. The objective of the maze is to reach the bottom right corner, or A[A.length-1][A.length-1]. You start from A[0][0] and can only go in 4 directions - up, down, left or right. Find if a path exists.
-
 For example, a path exists in the following maze:
-(Level: Medium)Word Break Problem: Given a String S, which contains letters and no spaces, find if it can be broken it into valid words. Return one such combination of words. Assume you are provided a dictionary of English words.
 
+(Level: Medium)Word Break Problem: Given a String S, which contains letters and no spaces, find if it can be broken it into valid words. Return one such combination of words. Assume you are provided a dictionary of English words.
 For example:
 S = "ilikemangotango"
 Output: any one of the following:
@@ -219,7 +218,6 @@ Output = (1,5), (6,9)
 (Level: Hard) Drawing the Skyline: You are given a list of buildings that are part of a skyline. For each building, you are given the height, start and end points. So if a building has [height=5, start=1, end=4], it represents a building of height 5 from point 1 on a number line to point 4.
 Given a list of such buildings that may overlap, you want to draw the skyline.
 
-
 Selection Algorithm
 --------------------
 (Level: Hard) Find the Kth smallest element in a given array of integers. For e.g,
@@ -227,23 +225,81 @@ If A => [5,7,4,6,5,3,3] and K => 3, Result will be 4.
 
 Note: This is also known as the Kth order statistic of the array.
 
-
 Sorting Algorithm
 ------------------
+(Level: Easy) How to Merge two Sorted Arrays 
+(Level: Medium) You are given a file with many lines. The lines can be of any length. Sort the file in alphabetical order. (Trick: Since moving around lines of different length is a challenge, move around pointers to the line(s))
+(Level: Easy) Given an array of single digit integers, sort it in O(n) time.
+For e.g, if A = [2,6,3,6,8,4,2], Output = [2,2,3,4,6,6,8]
 
 Graphs II
 ---------
+(Level: Medium) Given a graph, find if there is a cycle.
+Alternative phrasings (These questions use the same algorithm, so you don't need to practice them separately. Just practice the core algorithm to detect cycles.)
+1. Are Courses Valid: You are given a graph of courses a student needs to take. An edge from course A to B means that A is a prerequisite for B. Determine if the graph is valid and the courses can be completed.
+Solution: If there is a cycle, the courses cannot be completed.
+2. Can Software Compile: You are given a directory of source code files and the dependencies of each file. A file F can be dependent on one or more files in the directory. Determine if the software can compile.
+Solution: Make a graph where a node is a file and an edge is a dependency between 2 files. If there is a cycle, the software cannot compile.
+
+2 Color Problem: Given a graph, color its nodes with 2 colors - red and blue - such that no 2 neighbors have the same color.
+(Level: Medium) Given a graph, mark each connected component with a different color.
+ 
+ Find Islands: You are given a 2d array of 1s and 0s. 1 denotes land and 0 denotes water. Land can be connected diagonally or on either 4 ends. You want to find the number of islands in the array. Here is an example:
 
 Bit Manipulation
 -----------------
+(Level: Easy) Given an integer, flip all its bits.
+(Level: Easy) Given an integer, flip its bits at index 0 and index 5.
+(Level: Easy) Given an integer, get the bit at a given index I. Return 0 or 1.
+(Level: Easy) Given an integer, set the bit at index I to a given value V.
+(Level: Medium) Given an integer N, swap bits at indices I and J. For example,
+N = 1110 and I = 0, J = 3, Result = 0111
+N = 0110 and I = 0, J = 3, Result = 0110
+(Level: Medium) Given an integer N, reverse the order of its bits. For example,
+N = 1110, Result = 0111
+N = 0100, Result = 0010
+(Level: Medium) Count the number of bits in a number, i.e, number of bits set to 1. For example,
+N = 01011, Result = 3
+N = 01100, Result = 2
+(Level: Medium) Find the complement of an integer. A complement has the number's bits flipped, starting from the most significant 1. For example,
+A => 00010001, Complement => 00001110
+A => 00000111, Complement => 00000000
+(Level: Easy) Given an array with all numbers in [1, 2, 3, ... , n] except one number, find the missing number. For example:
+(Level: Easy)Given an array of integers where each element appears twice except one, find the element which appears once.
+For example: A = [3,7,3,5,5], Result = 7
 
 Binary Tree
 -------------
+(Level: Medium) Given a Binary Tree, print out its In-order Traversal, but implement the traversal iteratively instead of recursively.
+(Level: Easy) Find the height of a binary tree.
+(Level: Easy) Given a Binary Tree, print all paths from root to leaf. For example, in the below tree:
+(Level: Easy) Find the height of a binary tree.
+Remember: The Height of a binary tree is the Depth of its deepest node.
+(Level: Medium) Is Balanced: Given a binary tree, find if it is Balanced or not.
+(Level: Medium) Find the Diameter of a Binary Tree. The Diameter is the longest path from any 2 nodes in the tree. For example:
+(Level: Medium) LCA with Parent Pointer: Given a Binary Tree and two Nodes A and B, find their lowest common ancestor. Assume that each node has a pointer to its parent node.
+(Level: Medium) LCA without Parent Pointer: How will you find the LCA if you don't have a parent pointer?
+(Level: Hard) Given inorder and preorder traversals of a binary tree, reconstruct the binary tree.
+(Level: Hard) Can you reconstruct the tree if you have the preorder and postorder traversals? (Answer: No)
+
 
 Binary Search Tree
 --------------------
+(Level: Easy) Implement operations to Search for a node and Add a node into a Binary Search Tree.
+(Level: Hard) Implement the Delete operation in a Binary Search Tree, i.e, given a BST and a node, delete the node from the BST.
+(Level: Medium) Given a Binary Search Tree that can contain duplicates, find the first occurrence of the number X. The first occurrence is the first node that we will encounter in an in-order traversal.
+(Level: Easy) Find the in-order successor of a given node in a BST.
+ (Level: Medium) Range Querying: Given a Binary Search Tree, find all the elements in the range [A..B], both A and B inclusive. For example, if we are looking for nodes in the range [5,8] in the following tree:
+            8
+        3       10
+    1       6       14
+        4      7  13
+ Output: 6, 7, 8
+(Level: Easy) LCA: Given two nodes A and B in a Binary Search Tree, find the lowest common ancestor.
+(Level: Easy) Given a sorted array, build a balanced Binary Search Tree with the elements of the array.
+(Level: Hard) Given a sorted linked list, build a balanced Binary Search Tree with the elements of the linked list.
 
 Trie
 -----
-
+N/A
 
