@@ -35,6 +35,20 @@ Child to parent relationship map / aka Graph adjacency List
 
 {3 -> 1,2} {6 -> 3,5} {7 -> 5} {5 -> 4} {8 -> 4} {10 -> 8}
 
+matrix representation, row - parent, col - child
+
+    0 1 2 3 4 5 6 7 8 9 10
+0
+1         1
+2         1
+3                1
+4             1      1
+5                1 1
+6
+7
+8                        1
+9
+
 */
 public class FindNodesWithParent {
     public static void main(String[] args) {
@@ -88,8 +102,8 @@ public class FindNodesWithParent {
         }
 
         List<Integer> oneParentList = new ArrayList<>();
-        for(Map.Entry entry: pMap.entrySet()) {
-            Integer key = (Integer) entry.getKey();
+        for(Map.Entry<Integer, List<Integer>> entry: pMap.entrySet()) {
+            Integer key = entry.getKey();
             //List<Integer> val = (List<Integer>) entry.getValue();
             if(pMap.get(key).size() == 1) {
                 oneParentList.add(key);
