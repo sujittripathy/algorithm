@@ -1,3 +1,7 @@
+package recursion;
+
+import java.util.*;
+
 /**
     Given a collection of distinct integers, return all possible permutations.
 
@@ -14,7 +18,7 @@
  */
 public class Permutations {
     public static void main(String[] args) {
-        int[] arr = int[]{1,2,3};
+        int[] arr = new int[]{1,2,3};
         List<Integer> buffer = new ArrayList<>();
         List<List<Integer>> pList = new ArrayList<>();
         permuteHelper(arr, buffer, pList, 0);
@@ -30,7 +34,7 @@ public class Permutations {
 
         for(int i=aIndex;i<arr.length;i++) {
             buffer.add(arr[i]);
-            permuterHelper(arr, buffer, pList, aIndex+1);
+            permuteHelper(arr, buffer, pList, aIndex+1);
         }
     }
 }
