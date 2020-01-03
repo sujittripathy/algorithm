@@ -65,6 +65,8 @@ public class WordBreak {
         for(int i=pos;i<word.length();i++) {
             String w = word.substring(pos, i+1);
             if(dict.contains(w)) {
+                System.out.println(word.substring(pos, i+1) + " , " 
+                    + word.substring(i+1, word.length()));
                 response.add(w);
                 if(wordBreakUtil(word, response, i+1, dict)){
                     return true;

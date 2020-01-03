@@ -36,12 +36,15 @@ Example:
 The sequence 2, 4, 1, 3, 5 has three inversions (2, 1), (4, 1), (4, 3).
 https://www.geeksforgeeks.org/counting-inversions/
 
-12/28
+01/02
 ------
+# Flattening dictionary
+# First non repeated character in stream
+
+
 # You are given a binary tree in which each node contains an integer value.
 Find the number of paths that sum to a given value. The path does not need to start or end at the root or a leaf, but it must go downwards (traveling only from parent nodes to child nodes). (E) 
 https://leetcode.com/problems/path-sum-iii/
-
 # Coin Change Problem: Given a set of coin denominations, print out the different ways you can make a target amount. You can use as many coins of each denomination as you like.
 For example: If coins are [1,2,5] and the target is 5, output will be:
 [1,1,1,1,1]
@@ -57,12 +60,9 @@ https://leetcode.com/problems/counting-bits/
 The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
 How many possible unique paths are there?
 https://leetcode.com/problems/unique-paths/
-
-Later
------
 # Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
 Note: You can only move either down or right at any point in time.
 https://leetcode.com/problems/minimum-path-sum/
 # Find majority element in the array (Booyer Moore majority voting algorithm)
-Next Permutation
+# Next Permutation
 https://leetcode.com/problems/next-permutation/
