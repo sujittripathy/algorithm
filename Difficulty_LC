@@ -1,0 +1,15 @@
+| Easy              |        Medium            |      Hard
+
+-> HashMap         ->                          ->
+
+-> Array           -> Prefix Sum               -> 
+                   
+-> Stack           -> Monotonic stack          ->
+
+-> Queue           -> Monotonic queue          ->
+
+-> Simple DFS Traversal     -> DFS/BFS/Union Find       ->
+                            -> Iterative approach
+
+-> Graph Simple DFS/BFS       -> Topological Sort         -> Bellman Ford Algo
+                     
