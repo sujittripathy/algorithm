@@ -6,7 +6,7 @@ Given a sentence, reverse the words of the sentence. For example, "i live in a h
 (Level: Easy) Two Sum Problem - Find 2 numbers in a sorted array that sum to X. For example, if A = [1,2,3,4,5] and X = 9, the numbers are 4 and 5.
 (Level: Easy) Given a sorted array in non-decreasing order, return an array of squares of each number, also in non-decreasing order. For example:[-4,-2,-1,0,3,5] -> [0,1,4,9,16,25]
 How can you do it in O(n) time?
-(Level: Medium)Given an array of integers, find the continuous subarray, which when sorted, results in the entire array being sorted. For example: A = [0,2,3,1,8,6,9], result is the subarray [2,3,1,8,6]
+(Level: Medium)Given an array of integers, find the continuous subarray, which when sorted, results in the entire array being sorted. For example: A = [0,2,3,1,8,6,9], result is the subarray [2,3,1,8,6] LC#581 https://leetcode.com/problems/shortest-unsorted-continuous-subarray/
 (Level: Easy)You are given an array of integers. Rearrange the array so that all zeroes are at the beginning of the array. For example, [4,2,0,1,0,3,0] -> [0,0,0,4,1,2,3]
 (Level: Easy) Now, given an array, move all zeroes to the end of the array.
 For example, [4,2,0,1,0,3,0] -> [4,1,2,3,0,0,0]
